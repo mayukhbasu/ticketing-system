@@ -22,6 +22,16 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true
+    },
+
+}, {
+    toJSON: {
+        transform(doc, ret) {
+            ret.id = ret.__id;
+            delete ret.__id;
+            delete ret.password;
+            delete ret.__v;
+        }
     }
 });
 
