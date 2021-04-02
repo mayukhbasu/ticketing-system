@@ -1,6 +1,7 @@
 import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from 'mongoose';
 import {app} from '../app';
+import  request  from "supertest";
 
 
 let mongo: any;
@@ -24,4 +25,5 @@ beforeEach(async () => {
 afterAll(async () => {
     await mongo.stop();
     await mongoose.connection.close();
-})
+});
+
