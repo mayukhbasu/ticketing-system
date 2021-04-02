@@ -1,0 +1,26 @@
+import request from 'supertest';
+import { app } from "../../app";
+
+
+// it('fails when the email does not exist is supplied', async () => {
+//     await request(app).post('/api/users/signin')
+//     .send({email: 'rishiwhite@gmail.com', password: 'password'}).expect(400)
+// });
+
+it('fails when an incorrect password is supplied', async () => {
+    await request(app)
+    .post('/api/users/signup')
+    .send({
+      email: 'test@test.com',
+      password: 'password'
+    })
+    .expect(201);
+    await request(app)
+    .post('/api/users/signin')
+    .send({
+      email: 'test1@test.com',
+      password: 'password'
+    }).expect(400)
+    
+})
+
