@@ -4,9 +4,9 @@ import jwt from 'jsonwebtoken';
 import 'express-async-errors'
 
 
-import { validateRequest } from '../middlewares/validate-request';
+import { validateRequest } from '@armorkingtickets/common';
 import { User } from '../models/user';
-import { BadRequesterror } from '../errors/bad-request-error';
+import { BadRequesterror } from '@armorkingtickets/common';
 import { Password } from '../services/password';
 
 
