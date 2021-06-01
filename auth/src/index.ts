@@ -3,20 +3,17 @@ import 'express-async-errors'
 import { json } from "body-parser";
 import mongoose from 'mongoose';
 import cookieSession from "cookie-session";
-
-
-import { currentUserRouter } from "./routes/current-user";
-import { signinRouter } from "./routes/signin";
-import { signoutRouter } from "./routes/signout";
-import {signupRouter} from "./routes/signup";
 import { app } from './app';
 
 const start = async () => {
     if(!process.env.JWT_KEY) {
         throw new Error('JWT_KEY must be defined');
     }
+    if(!process.env.AUTH_URI) {
+        throw new Error('AUTH_URI must be defined');
+    }
     try{
-    await mongoose.connect('mongodb://auth-mongo-srv:27017/auth', {
+    await mongoose.connect(process.env.AUTH_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ticketing-dev-315011",
+  "private_key_id": "fdfb217dc25a5a995946f38c4226f1442492de3e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCjl7H+ix5ptEG6\nkWwR7wPGthS/gIOvs+j6sX8Dw+1HBOa8YcKC7FD4Kzm0DFMey1V1gBV9lKBO2GGS\nqP4pWqSx4SCCLObXy4MAgu0wit+J+OUz+LZtKfJuhD0LPcT5wxJgZb/BgaRjrHF7\nSaUPRHYEFGfuHKIYpjigcsS73UmWXLQO2HbfEv1dovA8X74dsE3GwG8JRUg3rC0B\nrjqVrRX7vrH1Fl/5t3FEP023da7QpDa6cGK0ZxJOmW5HYpYmvq8O9Cci7XTCMoYq\nsqoocAwRlO2tLcK3nIRtjOjJN1VtasTk2wtDsi1BECognNHVGLFwupo2ATWJl5Dn\nx1JSrg2HAgMBAAECggEARjyHabN+I8EGJV1xSkPV2bdsMgoxv7qdESEq2MmCcqbq\nj7/jPMXMP7iDRkeyWjrPnqqWz3uD1kY1ojuXH9cwdcSj6e/wTn8saAhOYLSHJBwu\nAAHNBRJo6UUyVkS3cMptdeDJkwGfvEGZ2WZ1jRgGGVtPgd5eQ/n9vvl3ePcZtIm5\n8yKmbnazhZ5UQV67RGOT0XdNFRHtl1JfRJxHzcI/nwf6Omtuw8r7fcWiQwJohALl\nmAb2E/tdqc69jDp93ZevK1ZF2uea3+5wErT/W+E6uhSIoGz6pX9f2t7KdcD9/cWV\n6UsRNInxcry/nTSgWHzGOrP7+fdCUJdz/Wm0u4Q/7QKBgQDObrOL2R1nxFlShev3\nYRUrPvk8sL3wXYz4mX9M0VFho0VTZackQp6u2x8n9nWFVwsOjm4cgAnVXVgE0PbX\ndQ6gi1nZApWjhUUlHCFv6EGAugYobrGLs5vbIx4t0S2vMIWHNGukwpjnd+JGB5zR\ne3vW184olXGe8dZ3EspAbRdu6wKBgQDK36YJ7u0SukiQ/dwDTV5X8Ns/pNuWFyTK\nSTVHs8Dp6JjyYRwTANzMwewzfH6NvgDz2VZ47WrIry5NdEFRuXUFUfavs+N4yitJ\nowoyQlLZgGyh2j/nBSYVXHo6OYbdiMFg+21Vy2XMKOY/rirA1IAu/gVHvoKMSluz\ncmT0xYNM1QKBgE0su7kbuU+S62XbpWT9iYF6cIlM9iWHg+1ozVu1oXwkIwXTqhH3\nSgXK67HwBO2NpheSDf5fq811sTNTwAS6wXYpwrRLsA/LAhemlaWVqe9rHGQ/RecZ\nhbn+PgkY+8BUHod2hIu7KJjYi+JsdCcoyBqA4ZTwkeK/PNOVVcGSR0FzAoGBALoy\npnv7dE959dxNgr7tJaflAfXZ40hQGY4nvuT+UBLfTnE3O8MdSYoMejOPEcAaIVmt\nojX/AcELN54TE1hktMibP6RnoGFefHhrUZJrWQsTWaD7ZSctjJSSegQyhFuThpjy\napkRw26sIxdTTR4Ka1O2BTah3cPRA3UhixM0rJu5AoGAR5x5Zwryfw4AEUi7mWy4\npIDLmlzRsR8lRwGzzw4fGQUWteIL5vJqtrJDbYnXP/faecIVG+AfQgW+WF/io29e\nEaaKBvl8D2ucbjbUp7ZX7ERBbTVeCQH6+PifawuxZ4In/IT8lOBnN9pJA5Ux8q2U\nlu/RhZr4LpsrPGV0mxbYX48=\n-----END PRIVATE KEY-----\n",
+  "client_email": "gcloud-service-account@ticketing-dev-315011.iam.gserviceaccount.com",
+  "client_id": "100688044997278580556",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gcloud-service-account%40ticketing-dev-315011.iam.gserviceaccount.com"
+}

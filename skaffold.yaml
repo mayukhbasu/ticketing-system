@@ -24,3 +24,12 @@ build:
         manual:
           - src: '**/*.js'
             dest: .
+    - image: us.gcr.io/ticketing-dev-315011/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.js'
+            dest: .
+  

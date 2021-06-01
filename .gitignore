@@ -2,3 +2,4 @@
 /client/node_modules
 /client/.next
 credentials.json
+/tickets/node_modules
