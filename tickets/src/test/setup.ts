@@ -1,7 +1,6 @@
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import mongoose from 'mongoose';
-import request from 'supertest';
-import { app } from '../app';
+
 import jwt from 'jsonwebtoken';
 
 declare global {
@@ -19,7 +18,7 @@ beforeAll(async () => {
 
   mongo = new MongoMemoryServer();
   const mongoUri = await mongo.getUri();
-
+  console.log(mongoUri);
   await mongoose.connect(mongoUri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
