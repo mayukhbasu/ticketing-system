@@ -18,7 +18,6 @@ const start = async () => {
     });
     console.log('Connected to MongoDb');
   } catch (err) {
-    console.log('Inside the error block')
     console.error(err);
   }
 
