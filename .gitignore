@@ -3,3 +3,4 @@
 /client/.next
 credentials.json
 /tickets/node_modules
+/nats-test
