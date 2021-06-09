@@ -17,4 +17,4 @@ gcloud iam service-accounts keys create gcloud.json --iam-account=ticketing-dev@
 
 port forward with kubectl:
 ----------------------------
-kubectl port-forward nats-depl-699fd76bff-n5b9x 4222:4222
+kubectl port-forward nats-depl-6777bbb7b4-q4nrh  4222:4222
