@@ -23,6 +23,7 @@ router.post(
     const {ticketId} = req.body;
     const ticket = await Ticket.findById(ticketId);
     if(!ticket) {
+      
       throw new NotFoundError();
     }
     const isReserved = await ticket.isReserved();
