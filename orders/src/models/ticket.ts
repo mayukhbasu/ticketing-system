@@ -1,6 +1,5 @@
-import { OrderStatus } from '@sgtickets/common';
 import mongoose from 'mongoose';
-import { Order } from './order';
+import { Order, OrderStatus } from './order';
 
 interface TicketAttrs {
   title: string;
@@ -42,16 +41,21 @@ const ticketSchema = new mongoose.Schema(
 ticketSchema.statics.build = (attrs: TicketAttrs) => {
   return new Ticket(attrs);
 };
-ticketSchema.methods.isReserved = async function() {
-  const existingOrder = await Order.findOne({ticket:this, status:{
-    $in: [
-      OrderStatus.Created,
-      OrderStatus.AwaitingPayment,
-      OrderStatus.Complete
-    ]
-  }});
+ticketSchema.methods.isReserved = async function () {
+  // this === the ticket document that we just called 'isReserved' on
+  const existingOrder = await Order.findOne({
+    ticket: this,
+    status: {
+      $in: [
+        OrderStatus.Created,
+        OrderStatus.AwaitingPayment,
+        OrderStatus.Complete,
+      ],
+    },
+  });
+
   return !!existingOrder;
-}
+};
 
 const Ticket = mongoose.model<TicketDoc, TicketModel>('Ticket', ticketSchema);
 
