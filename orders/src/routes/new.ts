@@ -22,6 +22,7 @@ router.post(
   async (req: Request, res: Response) => {
     const {ticketId} = req.body;
     const ticket = await Ticket.findById(ticketId);
+    
     if(!ticket) {
       
       throw new NotFoundError();
@@ -38,6 +39,7 @@ router.post(
       expiresAt: expiration,
       ticket
     });
+    
     await order.save();
     res.status(201).send(order);
   }
