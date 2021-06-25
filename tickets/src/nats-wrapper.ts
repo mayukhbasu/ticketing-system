@@ -5,6 +5,7 @@ class NatsWrapper {
     private _client?: Stan;
 
     get client() {
+        console.log('This is Nats client', this._client);
         if(!this._client) {
             throw new Error('Cannot access NATS client before connecting');
         }
