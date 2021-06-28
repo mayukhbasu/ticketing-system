@@ -1,5 +1,4 @@
-import { errorHandler } from "@armorkingtickets/common";
-import { NotFoundError } from "@armorkingtickets/common";
+import { errorHandler, NotFoundError, currentUser } from '@sgtickets/common';
 import cookieSession = require("cookie-session");
 import { json } from "body-parser";
 import express = require("express");
