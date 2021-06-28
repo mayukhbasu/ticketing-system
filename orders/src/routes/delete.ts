@@ -33,7 +33,6 @@ router.delete(
       version: order.version,
       ticket: {
         id: order.ticket.id,
-        
       },
     });
 
