@@ -4,9 +4,9 @@ import jwt from 'jsonwebtoken';
 import 'express-async-errors'
 
 
-import { validateRequest } from '@armorkingtickets/common';
+import { validateRequest } from '@sgtickets/common';
 import { User } from '../models/user';
-import { BadRequesterror } from '@armorkingtickets/common';
+import { BadRequestError } from '@sgtickets/common';
 import { Password } from '../services/password';
 
 
@@ -19,11 +19,11 @@ body('password').trim().notEmpty().withMessage("Must supply a password")
     const {email, password} = req.body;
     const existingUser = await User.findOne({email});
     if(!existingUser) {
-        throw new BadRequesterror('Invalid credentials');
+        throw new BadRequestError('Invalid credentials');
     }
     const passwordsMatch = await Password.compare(existingUser.password, password);
     if(!passwordsMatch) {
-        throw new BadRequesterror('Invalid credentials');
+        throw new BadRequestError('Invalid credentials');
     }
     const existingUserJwt = jwt.sign({
         id: existingUser.id,

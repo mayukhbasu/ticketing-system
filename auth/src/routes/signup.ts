@@ -5,8 +5,8 @@ import jwt from 'jsonwebtoken';
 
 
 import { User } from "../models/user";
-import { BadRequesterror } from "@armorkingtickets/common";
-import { validateRequest } from "@armorkingtickets/common";
+import { BadRequestError } from "@sgtickets/common";
+import { validateRequest } from "@sgtickets/common";
 
 const router = express.Router();
 
@@ -21,7 +21,7 @@ router.post('/api/users/signup',[
     const {email, password} = req.body;
     const existingUser = await User.findOne({email});
     if(existingUser) {
-        throw new BadRequesterror('Email already in use');
+        throw new BadRequestError('Email already in use');
     }
     const user = User.build({email, password});
     await user.save();
