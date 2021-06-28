@@ -5,3 +5,4 @@ credentials.json
 /tickets/node_modules
 /orders/node_modules
 /nats-test
+/expiration/node_modules

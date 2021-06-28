@@ -1,6 +1,6 @@
 Basic kubernetes:
 -------------------
-gcloud container clusters get-credentials ticketing-dev
+gcloud container clusters get-credentials my-cluster --zone us-central1-c
 kubectl create clusterrolebinding cluster-admin-binding \
   --clusterrole cluster-admin \
   --user $(gcloud config get-value account)
