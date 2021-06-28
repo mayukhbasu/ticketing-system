@@ -6,3 +6,4 @@ credentials.json
 /orders/node_modules
 /nats-test
 /expiration/node_modules
+.DS_Store
