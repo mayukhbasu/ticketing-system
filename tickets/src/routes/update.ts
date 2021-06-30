@@ -29,7 +29,8 @@ router.put(
     if (!ticket) {
       throw new NotFoundError();
     }
-    if(ticket.orderId) {
+
+    if (ticket.orderId) {
       throw new BadRequestError('Cannot edit a reserved ticket');
     }
 
