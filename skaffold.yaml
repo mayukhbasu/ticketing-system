@@ -4,11 +4,12 @@ deploy:
   kubectl:
     manifests:
       - ./infra/k8s/*
+      - ./infra/k8s-dev/*
 build:
-  googleCloudBuild:
-    projectId: ticketing-dev-315608
+  local:
+    push: false
   artifacts:
-    - image: us.gcr.io/ticketing-dev-315608/auth
+    - image: cygnetops/auth
       context: auth
       docker:
         dockerfile: Dockerfile
@@ -16,7 +17,7 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: us.gcr.io/ticketing-dev-315608/client
+    - image: cygnetops/ticketing-client
       context: client
       docker:
         dockerfile: Dockerfile
@@ -24,28 +25,35 @@ build:
         manual:
           - src: '**/*.js'
             dest: .
-    - image: us.gcr.io/ticketing-dev-315608/tickets
+    - image: cygnetops/tickets
       context: tickets
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: '**/*.js'
+          - src: 'src/**/*.ts'
             dest: .
-    - image: us.gcr.io/ticketing-dev-315608/orders
+    - image: cygnetops/orders
       context: orders
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: '**/*.js'
+          - src: 'src/**/*.ts'
             dest: .
-    - image: us.gcr.io/ticketing-dev-315608/expiration
+    - image: cygnetops/expiration
       context: expiration
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: '**/*.js'
+          - src: 'src/**/*.ts'
             dest: .
-  
+    - image: cygnetops/payments
+      context: payments
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
